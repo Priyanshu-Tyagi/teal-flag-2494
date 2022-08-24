@@ -56,7 +56,7 @@ const column5 = [
 export default function Footer() {
   return (
     <div className="maindivsize">
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", padding:"1rem 0" }}>
         <div style={{ width: "50%" }}>{/* Dummy */}</div>
         <div
           style={{
@@ -93,7 +93,7 @@ export default function Footer() {
             </GridItem>
 
             {column1.map((i) => (
-              <GridItem>
+              <GridItem key={i}>
                 <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
                   {i}
                 </Text>
@@ -111,7 +111,7 @@ export default function Footer() {
             </GridItem>
 
             {column2.map((i) => (
-              <GridItem>
+              <GridItem key={i}>
                 <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
                   {i}
                 </Text>
@@ -129,7 +129,7 @@ export default function Footer() {
             </GridItem>
 
             {column3.map((i) => (
-              <GridItem>
+              <GridItem key={i}>
                 <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
                   {i}
                 </Text>
@@ -147,7 +147,7 @@ export default function Footer() {
             </GridItem>
 
             {column4.map((i) => (
-              <GridItem>
+              <GridItem key={i}>
                 <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
                   {i}
                 </Text>
@@ -165,7 +165,7 @@ export default function Footer() {
             </GridItem>
 
             {column5.map((i) => (
-              <GridItem>
+              <GridItem key={i}>
                 <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
                   {i}
                 </Text>

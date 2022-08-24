@@ -1,0 +1,15 @@
+.bannerdiv{
+    width:95.5%;
+    margin: auto;
+}
+.bannerimg{
+    width: 100%;
+}
+.carouseldiv{
+    width: 95%;
+    padding: 0 1rem;
+    margin: auto;
+}
+.carouselimg{
+    width: 100%;
+}

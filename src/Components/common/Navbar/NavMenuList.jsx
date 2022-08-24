@@ -23,7 +23,7 @@ const column5t =['Luxe Bohemian','Platform Shoes'];
 
 export default function NavMenuList() {
   return (
-      <Grid templateColumns="repeat(6, 16%)" gap={4}>
+      <Grid templateColumns="repeat(6, 16%)" gap={1}>
         {/* First Column */}
         <GridItem>
           <Stack>
@@ -40,6 +40,7 @@ export default function NavMenuList() {
 
             {column1.map((i)=>(
               <MenuItem
+              key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               fontWeight="800"
               minW="0"
@@ -68,6 +69,7 @@ export default function NavMenuList() {
 
             {column2.map((i)=>(
               <MenuItem
+              key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -93,6 +95,7 @@ export default function NavMenuList() {
             </MenuItem>
 
             {column3.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -115,6 +118,7 @@ export default function NavMenuList() {
             </MenuItem>
 
             {column4y.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -133,6 +137,7 @@ export default function NavMenuList() {
             </MenuItem>
 
             {column4d.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -141,6 +146,7 @@ export default function NavMenuList() {
             </MenuItem>))}
 
             {column4h.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               fontWeight="800"
               minW="0"
@@ -164,6 +170,7 @@ export default function NavMenuList() {
             </MenuItem>
 
             {column5o.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -181,6 +188,7 @@ export default function NavMenuList() {
             </MenuItem>
 
             {column5t.map((i)=>(<MenuItem
+            key={i}
               _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
               minW="0"
               w={"auto"}
@@ -193,13 +201,48 @@ export default function NavMenuList() {
         {/* Sixth Column */}
         <GridItem>
           <Stack>
+          <MenuItem
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
             <MenuItem
-              _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
-              fontWeight="800"
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
+            <MenuItem
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
+            <MenuItem
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
+            <MenuItem
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
+            <MenuItem
+              _focus={{ bg: "none"}}
+              minW="0"
+              w={"auto"}
+            > 
+            </MenuItem>
+            <MenuItem
+              _focus={{ bg: "none"}}
               minW="0"
               w={"auto"}
             >
-              Women: Get Inspired
+              <img src="https://n.nordstrommedia.com/id/6379d00e-189e-4f5b-a2ef-fc24f4d818fd.jpg" alt="123456" />
             </MenuItem>
           </Stack>
         </GridItem>
