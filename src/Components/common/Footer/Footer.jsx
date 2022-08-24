@@ -56,7 +56,7 @@ const column5 = [
 export default function Footer() {
   return (
     <div className="maindivsize">
-      <div style={{ display: "flex", padding:"1rem 0" }}>
+      <div style={{ display: "flex", padding: "1rem 0" }}>
         <div style={{ width: "50%" }}>{/* Dummy */}</div>
         <div
           style={{
@@ -79,10 +79,12 @@ export default function Footer() {
         </div>
       </div>
 
+      <br/>s
+
       {/* FOOTER GRID */}
 
-      <div style={{ width: "90%",backgroundColor:"#f9f9f9" }}>
-        <Grid templateColumns="repeat(6, 1fr)" >
+      <div style={{ width: "90%", backgroundColor: "#f9f9f9" }}>
+        <Grid templateColumns="repeat(6, 1fr)">
           {/* first Column */}
 
           <Stack>
@@ -94,7 +96,16 @@ export default function Footer() {
 
             {column1.map((i) => (
               <GridItem key={i}>
-                <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
+                <Text
+                  _hover={{
+                    color: "#00819d",
+                    textDecorationLine: "underline",
+                    textDecorationThickness: "2px",
+                    cursor: "pointer",
+                  }}
+                  p=".5rem"
+                  fontSize="l"
+                >
                   {i}
                 </Text>
               </GridItem>
@@ -112,7 +123,16 @@ export default function Footer() {
 
             {column2.map((i) => (
               <GridItem key={i}>
-                <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
+                <Text
+                  _hover={{
+                    color: "#00819d",
+                    textDecorationLine: "underline",
+                    textDecorationThickness: "2px",
+                    cursor: "pointer",
+                  }}
+                  p=".5rem"
+                  fontSize="l"
+                >
                   {i}
                 </Text>
               </GridItem>
@@ -130,7 +150,16 @@ export default function Footer() {
 
             {column3.map((i) => (
               <GridItem key={i}>
-                <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
+                <Text
+                  _hover={{
+                    color: "#00819d",
+                    textDecorationLine: "underline",
+                    textDecorationThickness: "2px",
+                    cursor: "pointer",
+                  }}
+                  p=".5rem"
+                  fontSize="l"
+                >
                   {i}
                 </Text>
               </GridItem>
@@ -148,7 +177,16 @@ export default function Footer() {
 
             {column4.map((i) => (
               <GridItem key={i}>
-                <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
+                <Text
+                  _hover={{
+                    color: "#00819d",
+                    textDecorationLine: "underline",
+                    textDecorationThickness: "2px",
+                    cursor: "pointer",
+                  }}
+                  p=".5rem"
+                  fontSize="l"
+                >
                   {i}
                 </Text>
               </GridItem>
@@ -166,7 +204,16 @@ export default function Footer() {
 
             {column5.map((i) => (
               <GridItem key={i}>
-                <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} p=".5rem" fontSize="l">
+                <Text
+                  _hover={{
+                    color: "#00819d",
+                    textDecorationLine: "underline",
+                    textDecorationThickness: "2px",
+                    cursor: "pointer",
+                  }}
+                  p=".5rem"
+                  fontSize="l"
+                >
                   {i}
                 </Text>
               </GridItem>
@@ -177,18 +224,34 @@ export default function Footer() {
 
           <Stack>
             <GridItem display={"flex"}>
-                <Image height={"32px"} src="https://drive.google.com/uc?export=view&id=1-Doup0VdQdfe9MZVZpuE8iJjw68fZW3f" alt="mobile png"/>
+              <Image
+                height={"32px"}
+                src="https://drive.google.com/uc?export=view&id=1-Doup0VdQdfe9MZVZpuE8iJjw68fZW3f"
+                alt="mobile png"
+              />
               {/* https://drive.google.com/file/d/1-Doup0VdQdfe9MZVZpuE8iJjw68fZW3f/view?usp=sharing */}
-              <Text _hover={{ color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }} align="center" fontSize="l" fontWeight="600">
-              
+              <Text
+                _hover={{
+                  color: "#00819d",
+                  textDecorationLine: "underline",
+                  textDecorationThickness: "2px",
+                  cursor: "pointer",
+                }}
+                align="center"
+                fontSize="l"
+                fontWeight="600"
+              >
                 Download Our App
               </Text>
             </GridItem>
 
-              <GridItem>
-                <img src="https://drive.google.com/uc?export=view&id=1xIlfu6ZcqLEi19Ns9be-UITwdsEocE17" alt="Social Logos" />
-                {/* https://drive.google.com/file/d/1xIlfu6ZcqLEi19Ns9be-UITwdsEocE17/view?usp=sharing */}
-              </GridItem>
+            <GridItem>
+              <img
+                src="https://drive.google.com/uc?export=view&id=1xIlfu6ZcqLEi19Ns9be-UITwdsEocE17"
+                alt="Social Logos"
+              />
+              {/* https://drive.google.com/file/d/1xIlfu6ZcqLEi19Ns9be-UITwdsEocE17/view?usp=sharing */}
+            </GridItem>
           </Stack>
         </Grid>
       </div>

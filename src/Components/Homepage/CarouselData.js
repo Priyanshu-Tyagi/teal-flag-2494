@@ -64,7 +64,7 @@ export const Carousel1data = [
       desc: "T Tahari, Cole Haan, Max Studio and more.",
       undert: ["Shop Now"],
     },
-  ];
+];
 
 export const Carousel2data = [
     {
@@ -99,4 +99,96 @@ export const Carousel2data = [
       desc: "Online and in stores.",
       undert: ['Rack Essentials for the Home'],
     },
-  ];
+];
+
+export const ActiveStyleData = [
+{
+    id: 1,
+    img: "https://drive.google.com/uc?export=view&id=1ZEsZWP55MzcXl9EuBu6v4VO5QfBtedwG",
+    // https://drive.google.com/file/d/1ZEsZWP55MzcXl9EuBu6v4VO5QfBtedwG/view?usp=sharing
+    head: "Z by Zella, 90 Degree by Reflex & More",
+    desc: "Workout sets from $15.97.",
+    undert: ["Workout Sets","All Women's Activewear"],
+},
+{
+    id: 2,
+    img: "https://drive.google.com/uc?export=view&id=137OTlzDFGW84IkFtzHPMyWytbwbNarpA",
+    // https://drive.google.com/file/d/137OTlzDFGW84IkFtzHPMyWytbwbNarpA/view?usp=sharing
+    head: "PUMA, adidas & More",
+    desc: "Fresh pairs from $49.97",
+    undert: ["Women's Active Sneakers", "Men'sActive Sneakers"],
+},
+];
+
+export const BannerCarouselData = [
+ `https://drive.google.com/uc?export=view&id=12LiQaDcJv7gWPqbjXFgbFRkIDURRXsHF`,
+ `https://drive.google.com/uc?export=view&id=1rAFif6vowrgiJBifqPQrxHUlxuJ2QbG6`,
+
+
+
+    // https://drive.google.com/file/d/12LiQaDcJv7gWPqbjXFgbFRkIDURRXsHF/view?usp=sharing
+    // https://drive.google.com/file/d/1rAFif6vowrgiJBifqPQrxHUlxuJ2QbG6/view?usp=sharing
+ 
+];
+
+export const MustHaveData = [
+    {
+      id: 1,
+      img: "https://drive.google.com/uc?export=view&id=1Cb_k0_lpRIDhgverfsO7LhvbyGGukf4b",
+      // https://drive.google.com/file/d/1Cb_k0_lpRIDhgverfsO7LhvbyGGukf4b/view?usp=sharing
+      head: "Handbags Up to 55% Off",
+      desc: "Marc Jacobs and more.",
+      undert: ["Shoulder Bags","Crossbodies","All Handbags"],
+    },
+    {
+      id: 2,
+      img: "https://drive.google.com/uc?export=view&id=1_NPSWSNa9V0lhe8-5NMuaqppKBf6AHdV",
+      // https://drive.google.com/file/d/1_NPSWSNa9V0lhe8-5NMuaqppKBf6AHdV/view?usp=sharing
+      head: "Makeup from $29",
+      desc: "Urban Decay and more.",
+      undert: ["Makeup"],
+    },
+    {
+      id: 3,
+      img: "https://drive.google.com/uc?export=view&id=1iO-PnAUrTIH1BAsisZ8Cz9ov2-pVTe33",
+      // https://drive.google.com/file/d/1iO-PnAUrTIH1BAsisZ8Cz9ov2-pVTe33/view?usp=sharing
+      head: "Fine Jewelry Up to 50% Off",
+      desc: "Bony Levy and more.",
+      undert: ["Fine Jewelry"],
+    },
+];
+
+export const MoreToKnowData = [
+    {
+      id: 1,
+      img: "https://drive.google.com/uc?export=view&id=1wYdrqnUsefjCJps-eIuJxA_cB8YK9CYh",
+      // https://drive.google.com/file/d/1wYdrqnUsefjCJps-eIuJxA_cB8YK9CYh/view?usp=sharing
+      head: "An Exclusive Offer",
+      desc: "Just for new Nordstrom credit cardmembers. Restrictions apply.",
+      undert: ["Apply Now"],
+    },
+    {
+      id: 2,
+      img: "https://drive.google.com/uc?export=view&id=12lDgOwwq4qN02CqmJ8bDRXoGT54R1VvO",
+      // https://drive.google.com/file/d/12lDgOwwq4qN02CqmJ8bDRXoGT54R1VvO/view?usp=sharing
+      head: "Help Give Shoes to Local Kids",
+      desc: "Make a difference for kids in our communities by giving them brand-new, properly fitting Nike shoes so they can run, play and thrive this school year.",
+      undert: ["Learn More About Shoes That Fit"],
+    },
+    {
+      id: 3,
+      img: "https://drive.google.com/uc?export=view&id=1JHfaIvrbs309xMUwOo5C_CmqNsUanhsY",
+      // https://drive.google.com/file/d/1JHfaIvrbs309xMUwOo5C_CmqNsUanhsY/view?usp=sharing
+      head: "Shop online or on our app & pick up at Nordstrom Rack or Nordstrom.",
+      desc: " ",
+      undert: ["Learn More"],
+    },
+    {
+      id: 4,
+      img: "https://drive.google.com/uc?export=view&id=1SYXIcGWNM4tix2zgw50I4xbXnaja42aH",
+      // https://drive.google.com/file/d/1SYXIcGWNM4tix2zgw50I4xbXnaja42aH/view?usp=sharing
+      head: "We're in Your Neighborhood",
+      desc: "Shop with extra safety measures.",
+      undert: ['Find Your Rack'],
+    },
+];

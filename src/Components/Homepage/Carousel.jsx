@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Button, Container, Stack, Text } from "@chakra-ui/react";
-import { BBrandBPrice, Carousel1data, Carousel2data } from "./CarouselData";
+import { BannerCarouselData, BBrandBPrice, Carousel1data, Carousel2data, ActiveStyleData, MustHaveData, MoreToKnowData } from "./CarouselData";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -77,13 +77,13 @@ export class Carousel1 extends Component {
                   </Text>
                   <div style={{ display: "flex" }}>
                     {i.undert.map((j) => (
-                      <Text
+                      <Text key={j}
                         width="auto"
                         ml=".5rem"
                         color="#00819d"
                         textDecorationLine="underline"
                         textDecorationThickness="2px"
-                        _hover={{ textDecorationThickness: "3px" }}
+                        _hover={{ textDecorationThickness: "3px",cursor:"pointer" }}
                       >
                         {j}
                       </Text>
@@ -148,13 +148,13 @@ export class Carousel2 extends Component {
                     </Text>
                     <div style={{ display: "flex" }}>
                       {i.undert.map((j) => (
-                        <Text
+                        <Text key={j}
                           width="auto"
                           ml=".5rem"
                           color="#00819d"
                           textDecorationLine="underline"
                           textDecorationThickness="2px"
-                          _hover={{ textDecorationThickness: "3px" }}
+                          _hover={{ textDecorationThickness: "3px",cursor:"pointer" }}
                         >
                           {j}
                         </Text>
@@ -168,7 +168,172 @@ export class Carousel2 extends Component {
         </div>
       );
     }
-  }
+}
+
+export function ActiveStyle(){
+    return (
+        <div className="Scarouseldiv" >
+        {ActiveStyleData.map((i) => (
+            <div className="Scarouselinnerdiv
+            " key={i.id}>
+              <div>
+                <img className="carouselimg" src={i.img} alt={i.head} />
+              </div>
+              <div>
+                <Stack>
+                  <Text
+                    padding={"0"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="2xl"
+                    width="auto"
+                    fontWeight="800"
+                    ml=".5rem"
+                    color="gray.600"
+                  >
+                    {i.head}
+                  </Text>
+                  <Text
+                    padding={".5rem"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="l"
+                    width="auto"
+                    color="gray.500"
+                  >
+                    {i.desc}
+                  </Text>
+                  <div style={{ display: "flex" }}>
+                    {i.undert.map((j) => (
+                      <Text key={j}
+                        width="auto"
+                        ml=".5rem"
+                        color="#00819d"
+                        textDecorationLine="underline"
+                        textDecorationThickness="2px"
+                        _hover={{ textDecorationThickness: "3px",cursor:"pointer" }}
+                      >
+                        {j}
+                      </Text>
+                    ))}
+                  </div>
+                </Stack>
+              </div>
+            </div>
+          ))}
+        </div>
+    )
+}
+
+export function MustHave(){
+    return (
+        <div className="Scarouseldiv" >
+        {MustHaveData.map((i) => (
+            <div className="SThreecarouselinnerdiv
+            " key={i.id}>
+              <div>
+                <img className="carouselimg" src={i.img} alt={i.head} />
+              </div>
+              <div>
+                <Stack>
+                  <Text
+                    padding={"0"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="2xl"
+                    width="auto"
+                    fontWeight="800"
+                    ml=".5rem"
+                    color="gray.600"
+                  >
+                    {i.head}
+                  </Text>
+                  <Text
+                    padding={".5rem"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="l"
+                    width="auto"
+                    color="gray.500"
+                  >
+                    {i.desc}
+                  </Text>
+                  <div style={{ display: "flex" }}>
+                    {i.undert.map((j) => (
+                      <Text key={j}
+                        width="auto"
+                        ml=".5rem"
+                        color="#00819d"
+                        textDecorationLine="underline"
+                        textDecorationThickness="2px"
+                        _hover={{ textDecorationThickness: "3px",cursor:"pointer" }}
+                      >
+                        {j}
+                      </Text>
+                    ))}
+                  </div>
+                </Stack>
+              </div>
+            </div>
+          ))}
+        </div>
+    )
+}
+
+export function MoreToKnow(){
+    return (
+        <div className="Scarouseldiv" >
+        {MoreToKnowData.map((i) => (
+            <div className="SFourCarouselinnerdiv
+            " key={i.id}>
+              <div>
+                <img className="carouselimg" src={i.img} alt={i.head} />
+              </div>
+              <div>
+                <Stack>
+                  <Text
+                    padding={"0"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="l"
+                    width="auto"
+                    fontWeight="800"
+                    ml=".5rem"
+                    color="gray.600"
+                  >
+                    {i.head}
+                  </Text>
+                  <Text
+                    padding={".5rem"}
+                    justifyContent="left"
+                    textAlign={"left"}
+                    fontSize="l"
+                    width="auto"
+                    color="gray.600"
+                  >
+                    {i.desc}
+                  </Text>
+                  <div style={{ display: "flex" }}>
+                    {i.undert.map((j) => (
+                      <Text key={j}
+                        width="auto"
+                        ml=".5rem"
+                        color="#00819d"
+                        textDecorationLine="underline"
+                        textDecorationThickness="2px"
+                        _hover={{ textDecorationThickness: "3px",cursor:"pointer" }}
+                      >
+                        {j}
+                      </Text>
+                    ))}
+                  </div>
+                </Stack>
+              </div>
+            </div>
+          ))}
+        </div>
+    )
+}
 
 export class CarouselBBBP extends Component {
   render() {
@@ -198,3 +363,32 @@ export class CarouselBBBP extends Component {
     );
   }
 }
+
+export class BannerCarousel extends Component {
+    render() {
+      const settings = {
+        dots: false,
+        fade:true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        adaptiveHeight:true,
+        autoplaySpeed: 4000,
+        cssEase: "linear",
+        arrows:false,
+      };
+      return (
+        <div className="carouseldiv">
+          <Slider {...settings}>
+            {BannerCarouselData.map((i) => (
+              <div key={i}>
+                <img className="carouselimg" src={i} alt={i} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      );
+    }
+  }

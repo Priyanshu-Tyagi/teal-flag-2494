@@ -3,6 +3,7 @@ import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
 import "../../../styles/navbar.css";
 import NavSign from "./Navsign";
 import NavMenuList from "./NavMenuList";
+import { NavLink } from "react-router-dom";
 
 const navhead = ['Women','Mens','Kids','Shoes','Activewear','Bags & Accessories','Home','Beauty','Gift'];
 
@@ -23,6 +24,7 @@ export default function Navbar() {
         borderBottom="2px solid #acb4b5"
         padding="1rem 0rem"
       >
+        <NavLink to="/">
         <div>
           <Image
             src="https://drive.google.com/uc?export=view&id=1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy"
@@ -30,6 +32,7 @@ export default function Navbar() {
           />
           {/* https://drive.google.com/file/d/1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy/view?usp=sharing */}
         </div>
+        </NavLink>
         <div style={{width:"61%"}}>
           <InputGroup>
             <InputLeftElement
@@ -60,7 +63,7 @@ export default function Navbar() {
         </Menu>
       </div>
       {navhead.map((i)=>(
-        <div >
+        <div key={i}>
         <Menu >
           <MenuButton fontSize={"17px"} _hover={{textDecorationLine:"underline",textDecorationThickness:"2px"}}>
             {i}

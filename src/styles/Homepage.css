@@ -10,6 +10,21 @@
     padding: 0 1rem;
     margin: auto;
 }
+.Scarouseldiv{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.Scarouselinnerdiv{
+    width: 49%;
+}
+.SThreecarouselinnerdiv{
+    width: 32%;
+}
+.SFourCarouselinnerdiv{
+    width: 23.5%;
+}
 .carouselimg{
     width: 100%;
 }

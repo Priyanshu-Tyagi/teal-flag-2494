@@ -7,10 +7,11 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 const column1 = ["Back to School","Flash Event","New Arrivals","Best Sellers","Contemporary Brands","Trend Brands","Dresses Under $50","Denim Under $50","Sandals Under $50","Boots Under $100","Sweaters Under $50","Coats Under $100","Wedding Shop","Nike for the Family","Rack Essentials","Shop By Brand","Nordstrom Made","Clearance"];
 
-const column2 = ["Activewear",'Blazer','Coats & Jackets','Dresses','Jeans & Denim','Jumpsuits & Rompers',`Lingerie, Hosiery & Shapewear`,'Loungewear','Pants & Leggings','Shorts','Skirts','Sleepwear & Robes','Sweaters','Sweatshirts & Hoodies','Swimsuits & Cover-Ups','Tops',' ','Plus-Size'];
+const column2 = ['Blazer','Coats & Jackets','Dresses','Jeans & Denim','Jumpsuits & Rompers',`Lingerie, Hosiery & Shapewear`,'Loungewear','Pants & Leggings','Shorts','Skirts','Sleepwear & Robes','Sweaters','Sweatshirts & Hoodies','Swimsuits & Cover-Ups','Tops',' ','Plus-Size'];
 
 const column3 = ['Athletic & Running','Boots & Booties','Clogs','Comfort','Espadrilles','Flats','Flip-Flops & Slides','Heels','Loafers & Oxfords','Mules','Rain Boots','Sandals','Slippers','Sneakers','Wedges',' ','Extended Shoe Sizes & Widths'];
 
@@ -66,6 +67,15 @@ export default function NavMenuList() {
               Clothing
             </MenuItem>
 
+            <NavLink to="/women">
+            <MenuItem
+              _focus={{ bg: "none",color:"#00819d",textDecorationLine:"underline",textDecorationThickness:"2px" }}
+              minW="0"
+              w={"auto"}
+            >
+              Activewear
+            </MenuItem> 
+            </NavLink>
 
             {column2.map((i)=>(
               <MenuItem
