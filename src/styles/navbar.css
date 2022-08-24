@@ -1,0 +1,26 @@
+.navShip {
+  background-color: #00819d;
+  color: white;
+  padding: 0.5rem;
+}
+.underline {
+  text-decoration-line: underline;
+}
+.underline:hover {
+  cursor: pointer;
+}
+.tac{
+    align-self: center;
+}
+.navitems{
+    display:flex;
+    justify-content: space-around;
+    width:95%;
+    margin: auto;
+    padding: 1.5rem 0;
+    /* margin: .5rem 0rem; */
+}
+.navhigh:hover{
+    color: #00819d;
+    text-decoration: underline;
+}
