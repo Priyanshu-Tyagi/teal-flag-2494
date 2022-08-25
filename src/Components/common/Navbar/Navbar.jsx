@@ -1,11 +1,36 @@
-import { Container, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Menu, MenuButton, MenuItem, MenuList, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
+import {
+  Container,
+  Grid,
+  GridItem,
+  Image,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import "../../../styles/navbar.css";
 import NavSign from "./Navsign";
 import NavMenuList from "./NavMenuList";
 import { NavLink } from "react-router-dom";
 
-const navhead = ['Women','Mens','Kids','Shoes','Activewear','Bags & Accessories','Home','Beauty','Gift'];
+const navhead = [
+  "Women",
+  "Mens",
+  "Kids",
+  "Shoes",
+  "Activewear",
+  "Bags & Accessories",
+  "Home",
+  "Beauty",
+  "Gift",
+];
 
 export default function Navbar() {
   return (
@@ -25,15 +50,15 @@ export default function Navbar() {
         padding="1rem 0rem"
       >
         <NavLink to="/">
-        <div>
-          <Image
-            src="https://drive.google.com/uc?export=view&id=1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy"
-            alt="Logo"
-          />
-          {/* https://drive.google.com/file/d/1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy/view?usp=sharing */}
-        </div>
+          <div>
+            <Image
+              src="https://drive.google.com/uc?export=view&id=1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy"
+              alt="Logo"
+            />
+            {/* https://drive.google.com/file/d/1-b3mr0kQ2fDWlUQynCSSHzihlV0aHUuy/view?usp=sharing */}
+          </div>
         </NavLink>
-        <div style={{width:"61%"}}>
+        <div style={{ width: "61%" }}>
           <InputGroup>
             <InputLeftElement
               pointerEvents="none"
@@ -43,38 +68,55 @@ export default function Navbar() {
           </InputGroup>
         </div>
         <div className="tac">
-            {/* <Text>Sign In<ChevronDownIcon/></Text> */}
-            <NavSign />
+          {/* <Text>Sign In<ChevronDownIcon/></Text> */}
+          <NavSign />
+          <NavLink to="/bag">
+            <img
+              src="https://drive.google.com/uc?export=view&id=15IbQEr6POwfJwaRI2f98m2YcTlCaz9FX"
+              alt="15IbQEr6POwfJwaRI2f98m2YcTlCaz9FX"
+            />
+            {/* https://drive.google.com/file/d/15IbQEr6POwfJwaRI2f98m2YcTlCaz9FX/view?usp=sharing */}
+          </NavLink>
         </div>
       </Container>
 
-
       <div className="navitems">
-
-
-      <div>
-        <Menu >
-          <MenuButton fontSize={"17px"} color={"#d63835"} _hover={{textDecorationLine:"underline",textDecorationThickness:"2px"}}>
-            Clearance
-          </MenuButton>
-          <MenuList p={0} minW="0" maxW={"97vw"} ml={"0"} >
-          <NavMenuList/>
-          </MenuList>
-        </Menu>
-      </div>
-      {navhead.map((i)=>(
-        <div key={i}>
-        <Menu >
-          <MenuButton fontSize={"17px"} _hover={{textDecorationLine:"underline",textDecorationThickness:"2px"}}>
-            {i}
-          </MenuButton>
-          <MenuList p={0} minW="0" maxW={"auto"} ml={"-130px"} >
-          <NavMenuList/> 
-          </MenuList>
-        </Menu>
-      </div>
-      ))}
-      {/* <div>
+        <div>
+          <Menu>
+            <MenuButton
+              fontSize={"17px"}
+              color={"#d63835"}
+              _hover={{
+                textDecorationLine: "underline",
+                textDecorationThickness: "2px",
+              }}
+            >
+              Clearance
+            </MenuButton>
+            <MenuList p={0} minW="0" maxW={"97vw"} ml={"0"}>
+              <NavMenuList />
+            </MenuList>
+          </Menu>
+        </div>
+        {navhead.map((i) => (
+          <div key={i}>
+            <Menu>
+              <MenuButton
+                fontSize={"17px"}
+                _hover={{
+                  textDecorationLine: "underline",
+                  textDecorationThickness: "2px",
+                }}
+              >
+                {i}
+              </MenuButton>
+              <MenuList p={0} minW="0" maxW={"auto"} ml={"-130px"}>
+                <NavMenuList />
+              </MenuList>
+            </Menu>
+          </div>
+        ))}
+        {/* <div>
         <Menu >
           <MenuButton>
             Clearance
@@ -154,16 +196,23 @@ export default function Navbar() {
           </MenuList>
         </Menu>
       </div> */}
-      <div>
-      <Menu >
-          <MenuButton fontSize={"17px"} color={"#00819d"} _hover={{textDecorationLine:"underline",textDecorationThickness:"2px"}}>
-            Flash Events
-          </MenuButton>
-          <MenuList p={0} minW="0" maxW={"97vw"} ml={"0"} >
-          <NavMenuList/>
-          </MenuList>
-        </Menu>
-      </div>
+        <div>
+          <Menu>
+            <MenuButton
+              fontSize={"17px"}
+              color={"#00819d"}
+              _hover={{
+                textDecorationLine: "underline",
+                textDecorationThickness: "2px",
+              }}
+            >
+              Flash Events
+            </MenuButton>
+            <MenuList p={0} minW="0" maxW={"97vw"} ml={"0"}>
+              <NavMenuList />
+            </MenuList>
+          </Menu>
+        </div>
       </div>
     </div>
   );
