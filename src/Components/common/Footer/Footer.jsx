@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <br/>s
+      <br/>
 
       {/* FOOTER GRID */}
 

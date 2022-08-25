@@ -24,3 +24,14 @@
     color: #00819d;
     text-decoration: underline;
 }
+.navsignupbtn{
+  background-color: #00819d;
+  color:white;
+  border: 3px #00819d solid;
+  padding: .6rem 4rem;
+}
+.navsignupbtn:hover{
+  background-color: white;
+  color:#00819d;
+  border: 3px #00819d solid;
+}
