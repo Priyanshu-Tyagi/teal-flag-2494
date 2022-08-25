@@ -1,0 +1,26 @@
+.maindivsize{
+    width: 95%;
+    margin:auto;
+}
+/* div{border:1px solid red} */
+.inputdiv{
+    /* border: 1px solid red; */
+    width: 40%;
+}
+.footersignupbtn{
+    background-color: #00819d;
+    color:white;
+    border: 3px #00819d solid;
+    padding: .6rem 6rem;
+}
+.footersignupbtn:hover{
+    background-color: white;
+    color:#00819d;
+    border: 3px #00819d solid;
+}
+.footerinput{
+    width: 100%;
+    padding:.6rem;
+    border:1px solid gray;
+    border-bottom: 5px solid #00819d;
+}
