@@ -2,24 +2,24 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { getAllActivewear } from "../../../api/api";
 import Pagination from "../../common/Pagination";
+import ReactStars from "react-rating-stars-component";
 
-export default function AllActivewear({color,order}) {
+export default function AllActivewear({ color, order }) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-
 
   useEffect(() => {
     getAllActivewear({
       page: page,
       limit: 16,
-      q:color,
-      sort:'units',
-      order:order
+      q: color,
+      sort: "units",
+      order: order,
     }).then((res) => {
       console.log(res.data);
       setData(res.data);
     });
-  }, [page,color,order]);
+  }, [page, color, order]);
 
   // let media=[];
 
@@ -46,29 +46,32 @@ export default function AllActivewear({color,order}) {
                   alt={i.mediaById[Object.keys(i.mediaById)[0]].id}
                 />
               </div>
-              <div>
-                <h2>{i.brandName}</h2>
-                <p>{i.name}</p>
-                <p>
-                  {i.price.totalPriceRange.max.units}.
+              <div style={{ textAlign: "left" }}>
+                <h2 className="product-head">{i.brandName}</h2>
+                <p className="product-name">{i.name}</p>
+                <p className="product-new-price">
+                  ${i.price.totalPriceRange.max.units}.
                   {i.price.totalPriceRange.max.nanos == 0 ? "00" : "97"}
-                  <span>
+                  <span className="product-off-percent">
                     {"  ("}
                     {i.price.totalPercentOffRange.max}
                     {"% off)"}
                   </span>
                 </p>
-                <p>
-                  $ {i.price.regular.priceRange.max.units}.
+                <p className="product-original-price">
+                  ${i.price.regular.priceRange.max.units}.
                   {i.price.regular.priceRange.max.nanos == 0 ? "00" : "97"}
                 </p>
+                <ReactStars
+                  {...{ size: 25, activeColor: "#00819d", isHalf: true, value: i.reviewStarRating, edit: false }}
+                />
               </div>
             </div>
           </GridItem>
         ))}
       </Grid>
       <br />
-      <Pagination current={page} onChange={(a) => setPage(a)} length="3"/>
+      <Pagination current={page} onChange={(a) => setPage(a)} length="3" />
     </div>
   );
 }

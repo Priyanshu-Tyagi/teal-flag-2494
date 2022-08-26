@@ -38,9 +38,6 @@ export default function AllTabs({color,order}) {
           <Tab _selected={tabstyle} fontWeight="700">
             Leggings
           </Tab>
-          <Tab _selected={tabstyle} fontWeight="700">
-            Shirts & Tees
-          </Tab>
         </TabList>
 
         <TabPanels>
@@ -63,8 +60,6 @@ export default function AllTabs({color,order}) {
           <TabPanel>
             <Leggings color={color} order={order}/>
           </TabPanel>
-
-          <TabPanel>Shirts & Tees</TabPanel>
         </TabPanels>
       </Tabs>
     </div>

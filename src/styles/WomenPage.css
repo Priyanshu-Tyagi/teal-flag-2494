@@ -6,7 +6,7 @@
 }
 .All-Products-Main-Parts {
   width: 83%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .Working-main-div {
   display: flex;
@@ -53,4 +53,29 @@
 .other-text{
     font-size:1rem;
     font-weight:700;
+}
+.product-head{
+  font-weight: 700;
+  color:#302d2d;
+  font-size: 1.05rem;
+}
+.product-name{
+  font-weight:300;
+}
+.product-name:hover{
+  color:#00819d;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+.product-new-price{
+  font-weight: 600;
+  color: #d73b38;
+}
+.product-off-percent{
+  font-weight: 500;
+}
+.product-original-price{
+  text-decoration: line-through;
+  font-weight:300;
 }
