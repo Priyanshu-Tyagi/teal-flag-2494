@@ -1,0 +1,81 @@
+.Women-main-div {
+  display: flex;
+}
+.side-bar-part {
+  width: 17%;
+}
+.All-Products-Main-Parts {
+  width: 83%;
+  /* border: 1px solid red; */
+}
+.Working-main-div {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.inside-tab-main-div {
+  width: 95%;
+  margin: auto;
+}
+.paginationbtnmaindiv {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination-text-btn-style {
+  font-size: large;
+  color: rgb(59, 56, 56);
+}
+.pagination-text-btn-style:hover {
+  color: rgb(102, 96, 96);
+  cursor: pointer;
+}
+.pagination-num-btn-style {
+  font-size: large;
+  color: rgb(59, 56, 56);
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+.pagination-num-btn-style:hover {
+  color: rgb(102, 96, 96);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 2rem;
+  border: 1px solid rgb(53, 46, 46);
+}
+.Color-text{
+    font-size:1rem;
+    font-weight:700;
+}
+.other-text{
+    font-size:1rem;
+    font-weight:700;
+}
+.product-head{
+  font-weight: 700;
+  color:#302d2d;
+  font-size: 1.05rem;
+}
+.product-name{
+  font-weight:300;
+}
+.product-name:hover{
+  color:#00819d;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+.product-new-price{
+  font-weight: 600;
+  color: #d73b38;
+}
+.product-off-percent{
+  font-weight: 500;
+}
+.product-original-price{
+  text-decoration: line-through;
+  font-weight:300;
+}

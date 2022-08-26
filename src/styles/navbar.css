@@ -11,6 +11,7 @@
 }
 .tac{
     align-self: center;
+    display: flex;
 }
 .navitems{
     display:flex;
