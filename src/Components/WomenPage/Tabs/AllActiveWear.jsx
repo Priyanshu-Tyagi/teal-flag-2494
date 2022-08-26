@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getAllActivewear } from "../../../api/api";
 import Pagination from "../../common/Pagination";
 import ReactStars from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 
 export default function AllActivewear({ color, order }) {
   const [data, setData] = useState([]);
@@ -48,7 +49,7 @@ export default function AllActivewear({ color, order }) {
               </div>
               <div style={{ textAlign: "left" }}>
                 <h2 className="product-head">{i.brandName}</h2>
-                <p className="product-name">{i.name}</p>
+                <Link to={`/women/${i.id}`}><p className="product-name">{i.name}</p></Link>
                 <p className="product-new-price">
                   ${i.price.totalPriceRange.max.units}.
                   {i.price.totalPriceRange.max.nanos == 0 ? "00" : "97"}
