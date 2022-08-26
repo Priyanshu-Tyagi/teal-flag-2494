@@ -11,7 +11,7 @@ import { AccordionData, ColorData, ColorName, WOinner } from "./sidebardata";
 
 export default function SideBar({setColor,setOrder}) {
   return (
-    <div>
+    <div style={{position:"sticky",width:"100%"}}>
       <Accordion allowToggle>
         {AccordionData.map((i) => (
           <AccordionItem key={i.head}>

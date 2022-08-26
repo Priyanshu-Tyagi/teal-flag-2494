@@ -9,7 +9,7 @@ export default function WomenPage() {
   const [color, setColor] = useState("");
   const [order, setOrder] = useState("ASC");
   return (
-    <div>
+    <div >
       <Navbar />
       <br />
       <br />
