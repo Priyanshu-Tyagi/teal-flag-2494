@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../Components/common/Footer/Footer";
 import Navbar from "../Components/common/Navbar/Navbar";
+import { ExclusiveOffer } from "../Components/Homepage/Banner";
 import AllWomenProducts from "../Components/WomenPage/AllWomenProducts";
 import SideBar from "../Components/WomenPage/SideBar";
 import "../styles/WomenPage.css";
@@ -9,7 +10,7 @@ export default function WomenPage() {
   const [color, setColor] = useState("");
   const [order, setOrder] = useState("ASC");
   return (
-    <div >
+    <div>
       <Navbar />
       <br />
       <br />
@@ -21,9 +22,12 @@ export default function WomenPage() {
           />
         </div>
         <div className="All-Products-Main-Parts">
-          <AllWomenProducts color={color} order={order}/>
+          <AllWomenProducts color={color} order={order} />
         </div>
       </div>
+      <br />
+      <br />
+      <ExclusiveOffer />
       <br />
       <br />
       <Footer />

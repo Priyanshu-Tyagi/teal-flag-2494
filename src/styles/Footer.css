@@ -5,13 +5,13 @@
 /* div{border:1px solid red} */
 .inputdiv{
     /* border: 1px solid red; */
-    width: 40%;
+    width: 37%;
 }
 .footersignupbtn{
     background-color: #00819d;
     color:white;
     border: 3px #00819d solid;
-    padding: .6rem 6rem;
+    padding: .6rem 5rem;
 }
 .footersignupbtn:hover{
     background-color: white;
