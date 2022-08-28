@@ -17,7 +17,7 @@ export default function AddToBag() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <br />
       <br />
       <div style={{ width: "78%", margin: "auto" }}>

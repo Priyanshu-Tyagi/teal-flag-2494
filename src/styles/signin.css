@@ -1,0 +1,74 @@
+.signin-main-div{
+    /* border: 1px solid red; */
+    width: 75%;
+    display: flex;
+    margin:auto;
+    /* height: 200px; */
+}
+.signin-sub-div{
+    width: 50%;    
+    padding: 1rem;
+}
+.sign-in-btn{
+    background-color: #00819d;
+    color:white;
+    padding: 1rem 5rem;
+    border:2px solid #00819d;
+    margin-bottom: 1.8rem;
+}
+.sign-in-btn:hover{
+    background-color: white;
+    color:#00819d;
+    padding: 1rem 5rem;
+}
+.guest-btn{
+    background-color: #00819d;
+    width: 100%;
+    color:white;
+    padding: 1rem 0;
+    border:2px solid #00819d;
+}
+.guest-btn:hover{
+    background-color: white;
+    color:#00819d;
+    /* padding: 1rem 5rem; */
+}
+.paypal-btn{
+    background-color: white;
+    color:white;
+    padding: .5rem 7.4rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.paypal-btn:hover{
+    background-color: rgb(235, 227, 227);
+}
+.signin-head{
+  font-size: 1.8rem; 
+  text-align: left;
+  margin-top: 1rem;
+  color: #494949; 
+}
+.signin-text{
+    font-size: .8rem;
+    color: #494949;
+    text-align: left;
+    margin-bottom:1.2rem;
+    margin-top: 1rem;
+}
+.signin-span-text{
+    color: #00819d;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.signin-checkbox{
+    background-color: #e9e7e7;
+    width: 60%;
+    padding: .6rem 0;
+}
+.sign-input-lable{
+    font-size: .9rem;
+    font-weight: 700;
+    color: #4b4646;
+    margin: 1rem 0;
+}

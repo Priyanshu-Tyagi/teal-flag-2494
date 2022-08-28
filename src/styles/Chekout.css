@@ -1,0 +1,43 @@
+.checkout-main-div{
+    background-color: rgb(241, 241, 241);
+}
+.partition-container{
+    /* border: 1px solid red; */
+    width: 75%;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.review-part-container{
+    width: 34%;
+    margin-top: 3rem;
+}
+.other-part-container{
+    display: grid;  
+    width: 62%;
+    padding: 1rem;
+    /* border: 1px solid purple; */
+    margin-top: 2rem;
+    /* background-color:white; */
+    padding:1rem; 
+    row-gap: 1rem;
+}
+.Checkout-head{
+    font-size: 2rem; 
+    text-align: left;
+    margin-top: 1rem;
+    color: #494949; 
+  }
+  .Checkout-sub-head{
+    font-size: 1.7rem; 
+    text-align: left;
+    /* margin-top: 1rem; */
+    color: #494949; 
+  }
+  .Checkout-blue-text{
+    font-size: 1rem; 
+    text-align: left;
+    /* margin-top: 1rem; */
+    color: #00819d; 
+  }
