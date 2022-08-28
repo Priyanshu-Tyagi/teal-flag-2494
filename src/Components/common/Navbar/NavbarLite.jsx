@@ -9,11 +9,12 @@ export default function Navbar2() {
   return (
     <div>
       <Container
+      backgroundColor={"white"}
         display="flex"
         justifyContent="space-between"
-        maxW="95%"
+        maxW="100%"
         borderBottom="2px solid #acb4b5"
-        padding="1rem 0rem"
+        padding="1rem 1rem"
       >
         <NavLink to="/">
           <div>
