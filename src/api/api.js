@@ -14,7 +14,7 @@ import axios from "axios";
 
 export function getAllActivewear(params = {}) {
   return axios.get(
-    `https://nordstromrackproject.herokuapp.com/allactivewear?`,
+    `https://sincere-trusted-mitten.glitch.me/allactivewear?`,
     {
       params: {
         _page: params.page,
@@ -28,7 +28,7 @@ export function getAllActivewear(params = {}) {
 }
 
 export function getCropsAndCapris(params = {}) {
-  return axios.get(`https://nordstromrackproject.herokuapp.com/Crops&capris?`, {
+  return axios.get(`https://sincere-trusted-mitten.glitch.me/Crops&capris?`, {
     params: {
       _page: params.page,
       _limit: params.limit,
@@ -41,7 +41,7 @@ export function getCropsAndCapris(params = {}) {
 
 export function getDressesAndSkirts(params = {}) {
   return axios.get(
-    `https://nordstromrackproject.herokuapp.com/dresses&skirts?`,
+    `https://sincere-trusted-mitten.glitch.me/dresses&skirts?`,
     {
       params: {
         _page: params.page,
@@ -55,7 +55,7 @@ export function getDressesAndSkirts(params = {}) {
 }
 
 export function getJackets(params = {}) {
-  return axios.get(`https://nordstromrackproject.herokuapp.com/jackets?`, {
+  return axios.get(`https://sincere-trusted-mitten.glitch.me/jackets?`, {
     params: {
       _page: params.page,
       _limit: params.limit,
@@ -67,7 +67,7 @@ export function getJackets(params = {}) {
 }
 
 export function getLeggings(params = {}) {
-  return axios.get(`https://nordstromrackproject.herokuapp.com/leggings?`, {
+  return axios.get(`https://sincere-trusted-mitten.glitch.me/leggings?`, {
     params: {
       _page: params.page,
       _limit: params.limit,
