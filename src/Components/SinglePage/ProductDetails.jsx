@@ -14,7 +14,9 @@ export default function Product_Details({
   media,
   head,
 //   addtobag
-}) {
+}) 
+
+{
   console.log([name,
     minprice,
     off,
