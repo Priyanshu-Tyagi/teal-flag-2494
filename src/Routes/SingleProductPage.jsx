@@ -9,37 +9,22 @@ import Product_Details from "../Components/SinglePage/ProductDetails";
 
 export default function Single_Product_Page() {
   const [data,setData] = useState({});
-  const [media, setMedia] = useState({});
-  const [name, setName] = useState("");
-  const [mprice, setMPrice] = useState("");
-  const [off, setOff] = useState("");
-  const [mxprice, setMxPrice] = useState("");
-  const [head, setHead] = useState("");
-  const [review, setReview] = useState();
   const param = useParams();
-  useEffect(() => {
+   useEffect(() => {
     axios
       .get(
-        `https://nordstromrackproject.herokuapp.com/allactivewear/${param.id}`
+        `https://western-topaz-plutonium.glitch.me/all/${param.id}`
       )
       .then((res) => {
-        console.log(res.data);
+        console.log("check this ",res.data);
         setData(res.data);
-        setName(res.data.name);
-        setMPrice(res.data.pricesById.regular.minItemPrice);
-        setOff(res.data.pricesById.regular.minItemPercentOff);
-        setMxPrice(res.data.pricesById.compareat.maxItemPrice);
-        setReview(res.data.reviewStarRating);
-        setMedia(res.data.mediaById);
-        setHead(res.data.brandName);
       });
   }, []);
 
-  
-    
 
-  //   console.log(data.id)
-  // console.log(media)
+    console.log(data)
+
+
   return (
     <>
       <Navbar />
@@ -49,14 +34,6 @@ export default function Single_Product_Page() {
         <div>
           <Product_Details
           data={data}
-            head={head}
-            media={media}
-            name={name}
-            minprice={mprice}
-            off={off}
-            maxprice={mxprice}
-            review={review}
-            // addtobag={handleSubmit}
           />
         </div>
         <br /><br />

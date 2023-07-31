@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { getCropsAndCapris } from "../../../api/api";
 import Pagination from "../../common/Pagination";
+import { Link } from "react-router-dom";
 
 export default function CropsAndCapris({color,order}) {
   const [data, setData] = useState([]);
@@ -38,36 +39,36 @@ export default function CropsAndCapris({color,order}) {
     <div className="inside-tab-main-div">
       <Grid templateColumns="repeat(4, 1fr)" gap={"3.5rem"}>
       {data.map((i) => (
-          <GridItem key={i.id}>
-            <div>
+          <Link to={`/women/${i.id}`}>
+            <GridItem key={i.id}>
               <div>
-                <img
-                  src={i.mediaById[Object.keys(i.mediaById)[0]].src}
-                  alt={i.mediaById[Object.keys(i.mediaById)[0]].id}
-                />
+                <div>
+                  <img
+                    src={i.mediaById[0]}
+                    alt={i.mediaById[0]}
+                  />
+                </div>
+                <div style={{ textAlign: "left" }}>
+                  <h2 className="product-head">{i.brandName}</h2>
+                  <p className="product-name">{i.name}</p>
+                  <p className="product-new-price">
+                    ${(i.pricesById.maxItemPrice-((Number(i.pricesById.maxItemPercentOff)/100)*i.pricesById.maxItemPrice)).toFixed(2)}
+                    <span className="product-off-percent">
+                      {"  ("}
+                      {i.pricesById.maxItemPercentOff}
+                      {"% off)"}
+                    </span>
+                  </p>
+                  <p className="product-original-price">
+                    ${i.pricesById.maxItemPrice}
+                  </p>
+                  <ReactStars
+                    {...{ size: 25, activeColor: "#00819d", isHalf: true, value: i.reviewStarRating, edit: false }}
+                  />
+                </div>
               </div>
-              <div style={{ textAlign: "left" }}>
-                <h2 className="product-head">{i.brandName}</h2>
-                <p className="product-name">{i.name}</p>
-                <p className="product-new-price">
-                  ${i.price.totalPriceRange.max.units}.
-                  {i.price.totalPriceRange.max.nanos == 0 ? "00" : "97"}
-                  <span className="product-off-percent">
-                    {"  ("}
-                    {i.price.totalPercentOffRange.max}
-                    {"% off)"}
-                  </span>
-                </p>
-                <p className="product-original-price">
-                  ${i.price.regular.priceRange.max.units}.
-                  {i.price.regular.priceRange.max.nanos == 0 ? "00" : "97"}
-                </p>
-                <ReactStars
-                  {...{ size: 25, activeColor: "#00819d", isHalf: true, value: i.reviewStarRating, edit: false }}
-                />
-              </div>
-            </div>
-          </GridItem>
+            </GridItem>
+          </Link>
         ))}
       </Grid>
       <br />
