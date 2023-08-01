@@ -35,6 +35,9 @@
 //   // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
 //   // Object.keys(data[0].mediaById).forEach((key,index)=>{console.log(data[0].mediaById[key].src)})
 
+// if (!data || Object.keys(data).length === 0) {
+//     return <div>Loading...</div>;
+//   } {
 //   return (
 //     <div className="inside-tab-main-div">
 //       <Grid templateColumns="repeat(4, 1fr)" gap={"3.5rem"}>
@@ -76,4 +79,5 @@
 //       <Pagination current={page} onChange={(a) => setPage(a)} length="3" />
 //     </div>
 //   );
+// }
 // }
