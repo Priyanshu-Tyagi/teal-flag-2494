@@ -6,7 +6,7 @@ import {
   TabPanel,
   Button,
 } from "@chakra-ui/react";
-import AllActivewear from "./Tabs/AllActiveWear";
+// import AllActivewear from "./Tabs/AllActiveWear";
 import CropsAndCapris from "./Tabs/Crops&Capris";
 import DressesAndSkirts from "./Tabs/Dresses&Skirts";
 import Jackets from "./Tabs/Jackets";
@@ -23,9 +23,9 @@ export default function AllTabs({color,order}) {
     <div>
       <Tabs>
         <TabList color="#494949">
-          <Tab _selected={tabstyle} fontWeight="700">
+          {/* <Tab _selected={tabstyle} fontWeight="700">
             All Activewear
-          </Tab>
+          </Tab> */}
           <Tab _selected={tabstyle} fontWeight="700">
             Crops & Capris
           </Tab>
@@ -41,9 +41,9 @@ export default function AllTabs({color,order}) {
         </TabList>
 
         <TabPanels>
-          <TabPanel>
+          {/* <TabPanel>
             <AllActivewear color={color} order={order} />
-          </TabPanel>
+          </TabPanel> */}
 
           <TabPanel>
             <CropsAndCapris color={color} order={order}/>
