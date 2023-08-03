@@ -6,13 +6,32 @@ import Navbar2 from "../Components/common/Navbar/NavbarLite";
 import "../styles/Chekout.css";
 
 export default function CheckOut() {
+
+
   const [data, setData] = useState([]);
+
+
   useEffect(() => {
-    axios.get(`https://630489f8761a3bce77e9dd0f.mockapi.io/bag`).then((res) => {
-      console.log(res.data);
+    axios.get(`https://western-topaz-plutonium.glitch.me/bag`).then((res) => {
+      // console.log(res.data);
       setData(res.data);
     });
   }, []);
+
+
+  const calculateSubtotal = () => {
+    return data.reduce((total, item) => total + Number(item.minprice), 0).toFixed(2);
+  };
+
+  const calculateShipping = () => {
+    return (calculateSubtotal() * 0.1).toFixed(2);
+  }
+
+  const calculateTax = () => {
+    return (calculateSubtotal() * 0.15).toFixed(2);
+  }
+
+
   return (
     <div className="checkout-main-div">
       <Navbar2 />
@@ -35,7 +54,7 @@ export default function CheckOut() {
               alt="1SAw6ulQJVhPK9oLxJ6s0H371p69M1FF0"
             />
             {/* https://drive.google.com/file/d/1SAw6ulQJVhPK9oLxJ6s0H371p69M1FF0/view?usp=sharing */}
-            <div style={{display:"flex",marginLeft:"3rem",marginBottom:"3rem",marginTop:"1rem"}}>
+            <div style={{ display: "flex", marginLeft: "3rem", marginBottom: "3rem", marginTop: "1rem" }}>
               {data.map((i) => (
                 <img width={"9%"} src={i.media} alt={i.media} />
               ))}
@@ -80,7 +99,7 @@ export default function CheckOut() {
           </div>
         </div>
         <div className="review-part-container">
-          <ReviewDiv />
+          <ReviewDiv sub={calculateSubtotal()} ship={calculateShipping()} tax={calculateTax()}/>
         </div>
       </div>
     </div>

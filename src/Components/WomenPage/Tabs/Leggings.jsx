@@ -17,7 +17,7 @@ export default function Leggings({ color, order }) {
       sort: 'units',
       order: order
     }).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setData(res.data);
     });
   }, [page, color, order]);
@@ -29,55 +29,54 @@ export default function Leggings({ color, order }) {
   //         media.push(item.mediaById[key]);
   //     }
   // })
-  // setTimeout(()=>{console.log(media)},3000)
+  // setTimeout(()=>{// console.log(media)},3000)
 
-  // console.log(data[0].mediaById)
-  // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
-  // Object.keys(data[0].mediaById).forEach((key,index)=>{console.log(data[0].mediaById[key].src)})
+  // // console.log(data[0].mediaById)
+  // // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
+  // Object.keys(data[0].mediaById).forEach((key,index)=>{// console.log(data[0].mediaById[key].src)})
 
   if (!data || Object.keys(data).length === 0) {
     return <div>Loading...</div>;
-  } {
-    return (
-      <div className="inside-tab-main-div">
-        <Grid templateColumns="repeat(4, 1fr)" gap={"3.5rem"}>
-          {data.map((i) => (
-            <Link to={`/women/${i.id}`}>
-              <GridItem key={i.id}>
-                <div>
-                  <div>
-                    <img
-                      height={'200px'}
-                      src={i.mediaById[0]}
-                      alt={i.mediaById[0]}
-                    />
-                  </div>
-                  <div style={{ textAlign: "left" }}>
-                    <h2 className="product-head">{i.brandName}</h2>
-                    <p className="product-name">{i.name}</p>
-                    <p className="product-new-price">
-                      ${(i.pricesById.maxItemPrice - ((Number(i.pricesById.maxItemPercentOff) / 100) * i.pricesById.maxItemPrice)).toFixed(2)}
-                      <span className="product-off-percent">
-                        {"  ("}
-                        {i.pricesById.maxItemPercentOff}
-                        {"% off)"}
-                      </span>
-                    </p>
-                    <p className="product-original-price">
-                      ${i.pricesById.maxItemPrice}
-                    </p>
-                    <ReactStars
-                      {...{ size: 25, activeColor: "#00819d", isHalf: true, value: i.reviewStarRating, edit: false }}
-                    />
-                  </div>
-                </div>
-              </GridItem>
-            </Link>
-          ))}
-        </Grid>
-        <br />
-        <Pagination current={page} onChange={(a) => setPage(a)} length="3" />
-      </div>
-    );
   }
+  return (
+    <div className="inside-tab-main-div">
+      <Grid templateColumns="repeat(4, 1fr)" gap={"3.5rem"}>
+        {data.map((i) => (
+          <Link to={`/women/${i.id}`}>
+            <GridItem key={i.id}>
+              <div>
+                <div>
+                  <img
+                    height={'200px'}
+                    src={i.mediaById[0]}
+                    alt={i.mediaById[0]}
+                  />
+                </div>
+                <div style={{ textAlign: "left" }}>
+                  <h2 className="product-head">{i.brandName}</h2>
+                  <p className="product-name">{i.name}</p>
+                  <p className="product-new-price">
+                    ${(i.pricesById.maxItemPrice - ((Number(i.pricesById.maxItemPercentOff) / 100) * i.pricesById.maxItemPrice)).toFixed(2)}
+                    <span className="product-off-percent">
+                      {"  ("}
+                      {i.pricesById.maxItemPercentOff}
+                      {"% off)"}
+                    </span>
+                  </p>
+                  <p className="product-original-price">
+                    ${i.pricesById.maxItemPrice}
+                  </p>
+                  <ReactStars
+                    {...{ size: 25, activeColor: "#00819d", isHalf: true, value: i.reviewStarRating, edit: false }}
+                  />
+                </div>
+              </div>
+            </GridItem>
+          </Link>
+        ))}
+      </Grid>
+      <br />
+      <Pagination current={page} onChange={(a) => setPage(a)} length="3" />
+    </div>
+  );
 }

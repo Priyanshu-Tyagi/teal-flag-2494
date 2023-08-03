@@ -1,8 +1,5 @@
 import "../../../styles/Footer.css";
 import {
-  Button,
-  ButtonGroup,
-  Container,
   Grid,
   GridItem,
   Image,

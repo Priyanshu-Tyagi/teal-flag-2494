@@ -8,12 +8,42 @@ import { Link } from "react-router-dom";
 
 export default function AddToBag() {
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    axios.get(`https://630489f8761a3bce77e9dd0f.mockapi.io/bag`).then((res) => {
-      console.log(res.data);
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios.get(`https://western-topaz-plutonium.glitch.me/bag`).then((res) => {
+      // console.log(res.data);
       setData(res.data);
     });
-  }, []);
+  };
+
+  const handleRemoveItem = (itemId) => {
+
+    axios
+      .delete(`https://western-topaz-plutonium.glitch.me/bag/${itemId}`)
+      .then(() => {
+
+        fetchData();
+      })
+      .catch((error) => {
+        console.error("Error removing item:", error);
+      });
+  };
+
+  const calculateSubtotal = () => {
+    return data.reduce((total, item) => total + Number(item.minprice), 0).toFixed(2);
+  };
+
+  const calculateShipping = () => {
+    return (calculateSubtotal() * 0.1).toFixed(2);
+  }
+
+  const calculateTax = () => {
+    return (calculateSubtotal() * 0.15).toFixed(2);
+  }
 
   return (
     <>
@@ -21,13 +51,7 @@ export default function AddToBag() {
       <br />
       <br />
       <div style={{ width: "78%", margin: "auto" }}>
-        <div>
-          <img
-            src="https://drive.google.com/uc?export=view&id=1b0KMSKIF0ShM0HWF6ubL3nGRQP9XYt8w"
-            alt="1b0KMSKIF0ShM0HWF6ubL3nGRQP9XYt8w"
-          />
-          {/* https://drive.google.com/file/d/1b0KMSKIF0ShM0HWF6ubL3nGRQP9XYt8w/view?usp=sharing */}
-        </div>
+
         <div>
           <img
             src="https://drive.google.com/uc?export=view&id=1hxbGiRfFEv4iBDg-tGJI_dopZORR2JcX"
@@ -51,11 +75,11 @@ export default function AddToBag() {
               }}
             >
               <div>
-                <img width={"50%"} src={i.media} alt={i.media} />
+                <img width={"50%"} src={i.mediaById[0]} alt={i.mediaById[0]} />
               </div>
               <div style={{ marginLeft: "-2rem" }}>
                 <Text color={"#494949"} fontSize={".9rem"} textAlign={"left"}>
-                  {i.head}
+                  {i.brandName}
                 </Text>
                 <Text color={"#494949"} fontSize={".9rem"} textAlign={"left"}>
                   {i.name}
@@ -75,6 +99,7 @@ export default function AddToBag() {
                     marginLeft={"1rem"}
                     marginRight={"3rem"}
                     _hover={{ color: "#07b5db", cursor: "pointer" }}
+                    onClick={() => handleRemoveItem(i.id)}
                   >
                     Remove
                   </Text>
@@ -100,7 +125,7 @@ export default function AddToBag() {
                   textAlign={"right"}
                   marginRight={"1rem"}
                 >
-                  ${i.minprice}
+                  ${(i.pricesById.maxItemPrice - ((Number(i.pricesById.maxItemPercentOff) / 100) * i.pricesById.maxItemPrice)).toFixed(2)}
                 </Text>
                 <br />
                 <Text
@@ -108,7 +133,7 @@ export default function AddToBag() {
                   textAlign={"right"}
                   marginRight={"1rem"}
                 >
-                  Now: ${i.minprice}
+                  ${(i.pricesById.maxItemPrice - ((Number(i.pricesById.maxItemPercentOff) / 100) * i.pricesById.maxItemPrice)).toFixed(2)}
                 </Text>
                 <Text
                   fontSize={"1rem"}
@@ -117,7 +142,7 @@ export default function AddToBag() {
                   textAlign={"right"}
                   marginRight={"1rem"}
                 >
-                  *${i.maxprice}
+                  *${i.pricesById.maxItemPrice}
                 </Text>
               </div>
               <br />
@@ -154,7 +179,7 @@ export default function AddToBag() {
                 }}
               >
                 <Text fontSize={"1.1rem"}>Subtotal</Text>
-                <Text fontSize={"1.1rem"}>$66.91</Text>
+                <Text fontSize={"1.1rem"}>${calculateSubtotal()}</Text>
               </div>
               <div
                 style={{
@@ -164,7 +189,7 @@ export default function AddToBag() {
                 }}
               >
                 <Text fontSize={".9rem"}>Shipping</Text>
-                <Text fontSize={".9rem"}>$6.69</Text>
+                <Text fontSize={".9rem"}>${calculateShipping()}</Text>
               </div>
               <div
                 style={{
@@ -174,7 +199,7 @@ export default function AddToBag() {
                 }}
               >
                 <Text fontSize={".9rem"}>Estimated tax</Text>
-                <Text fontSize={".9rem"}>$8.03</Text>
+                <Text fontSize={".9rem"}>${calculateTax()}</Text>
               </div>
               <br />
             </div>
@@ -182,7 +207,7 @@ export default function AddToBag() {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <Text fontSize={"1.2rem"}>Estimated total</Text>
-                <Text fontSize={"1.2rem"}>$81.63</Text>
+                <Text fontSize={"1.2rem"}>${Number(calculateShipping()) + Number(calculateSubtotal()) + Number(calculateTax())}</Text>
               </div>
               <div>
                 <img
@@ -193,20 +218,20 @@ export default function AddToBag() {
               </div>
               <div>
                 <Link to={"/checkout"}>
-                <Button
-                  width="100%"
-                  color="white"
-                  py={"1rem"}
-                  backgroundColor={"#00819d"}
-                  borderRadius={"0"}
-                  _hover={{
-                    backgroundColor: "white",
-                    color: "#00819d",
-                    border: "2px solid #00819d",
-                  }}
-                >
-                  Check Out
-                </Button></Link>
+                  <Button
+                    width="100%"
+                    color="white"
+                    py={"1rem"}
+                    backgroundColor={"#00819d"}
+                    borderRadius={"0"}
+                    _hover={{
+                      backgroundColor: "white",
+                      color: "#00819d",
+                      border: "2px solid #00819d",
+                    }}
+                  >
+                    Check Out
+                  </Button></Link>
               </div>
               <div>
                 <img

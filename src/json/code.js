@@ -34,7 +34,7 @@ fs.readFile(jsonFilePath, 'utf8', (err, data) => {
                 return;
             }
 
-            console.log(`The specified keys were successfully deleted from the JSON data.`);
+            // console.log(`The specified keys were successfully deleted from the JSON data.`);
         });
     } catch (err) {
         console.error('Error parsing JSON data:', err);

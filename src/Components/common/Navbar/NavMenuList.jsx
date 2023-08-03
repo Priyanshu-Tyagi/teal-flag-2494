@@ -3,9 +3,7 @@ import {
   GridItem,
   MenuDivider,
   MenuItem,
-  MenuList,
   Stack,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 

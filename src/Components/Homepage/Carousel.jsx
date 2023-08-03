@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button, Container, Stack, Text } from "@chakra-ui/react";
+import { Button, Stack, Text } from "@chakra-ui/react";
 import { BannerCarouselData, BBrandBPrice, Carousel1data, Carousel2data, ActiveStyleData, MustHaveData, MoreToKnowData } from "./CarouselData";
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div className={className} onClick={onClick}>
         <Button color="black"> {" > "} </Button>
@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
   }
   
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div className={className} style={{color:"black"}} onClick={onClick}>
         <Button color="black">{" < "}</Button>

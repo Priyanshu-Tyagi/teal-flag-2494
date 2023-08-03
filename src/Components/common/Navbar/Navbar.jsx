@@ -1,20 +1,15 @@
 import {
   Container,
-  Grid,
-  GridItem,
   Image,
   Input,
   InputGroup,
   InputLeftElement,
   Menu,
   MenuButton,
-  MenuItem,
   MenuList,
-  SimpleGrid,
-  Stack,
   Text,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 import "../../../styles/navbar.css";
 import NavSign from "./Navsign";
 import NavMenuList from "./NavMenuList";

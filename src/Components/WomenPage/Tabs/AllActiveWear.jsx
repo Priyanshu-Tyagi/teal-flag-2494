@@ -17,7 +17,7 @@
 //       sort: "units",
 //       order: order,
 //     }).then((res) => {
-//       console.log(res.data);
+//       // console.log(res.data);
 //       setData(res.data);
 //     });
 //   }, [page, color, order]);
@@ -29,11 +29,11 @@
 //   //         media.push(item.mediaById[key]);
 //   //     }
 //   // })
-//   // setTimeout(()=>{console.log(media)},3000)
+//   // setTimeout(()=>{// console.log(media)},3000)
 
-//   // console.log(data[0].mediaById)
-//   // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
-//   // Object.keys(data[0].mediaById).forEach((key,index)=>{console.log(data[0].mediaById[key].src)})
+//   // // console.log(data[0].mediaById)
+//   // // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
+//   // Object.keys(data[0].mediaById).forEach((key,index)=>{// console.log(data[0].mediaById[key].src)})
 
 // if (!data || Object.keys(data).length === 0) {
 //     return <div>Loading...</div>;

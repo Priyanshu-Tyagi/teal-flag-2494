@@ -27,5 +27,5 @@ const object =           {
   
   const srcArray = Object.values(object).map(media => media.src);
   
-  console.log(srcArray);
+  // console.log(srcArray);
   

@@ -1,9 +1,8 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from "react";
 
 export default function Product_Images({ media }) {
-  console.log(media);
+  // console.log(media);
   // let imgarr = [];
   // Object.keys(media).forEach((key, index) => {
   //   if (media[key].group !== "alt") {
@@ -12,7 +11,7 @@ export default function Product_Images({ media }) {
   // });
   // let finalimgarr=[];
   // if(imgarr.length>6){for(let i=0;i<6;i++){finalimgarr.push(imgarr[i])}}else{for(let i=0;i<imgarr.length;i++){finalimgarr.push(imgarr[i])}} 
-  // console.log(imgarr);
+  // // console.log(imgarr);
 
   return (
     <Grid templateColumns="repeat(3,1fr)" gap={"2rem"} padding={"1rem"}>
