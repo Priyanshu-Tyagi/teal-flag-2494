@@ -1,7 +1,7 @@
 import { Button, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-export default function ReviewDiv() {
+export default function ReviewDiv({ship, sub, tax}) {
   return (
     <div style={{ backgroundColor:"white",padding:"1rem",color:"#494949" }}>
         <Text color="#494949" fontSize="1.5rem" textAlign="left">Review order</Text>
@@ -21,7 +21,7 @@ export default function ReviewDiv() {
           }}
         >
           <Text fontSize={"1.1rem"}>Your items</Text>
-          <Text fontSize={"1.1rem"}>$66.91</Text>
+          <Text fontSize={"1.1rem"}>${sub}</Text>
         </div>
         <div
           style={{
@@ -31,7 +31,7 @@ export default function ReviewDiv() {
           }}
         >
           <Text fontSize={".9rem"}>Shipping</Text>
-          <Text fontSize={".9rem"}>$6.69</Text>
+          <Text fontSize={".9rem"}>${ship}</Text>
         </div>
         <div
           style={{
@@ -41,7 +41,7 @@ export default function ReviewDiv() {
           }}
         >
           <Text fontSize={".9rem"}>Estimated tax</Text>
-          <Text fontSize={".9rem"}>$8.03</Text>
+          <Text fontSize={".9rem"}>${tax}</Text>
         </div>
         <br />
       </div>
@@ -49,7 +49,7 @@ export default function ReviewDiv() {
       <div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Text fontSize={"1.2rem"}>Estimated total</Text>
-          <Text fontSize={"1.2rem"}>$81.63</Text>
+          <Text fontSize={"1.2rem"}>${Number(sub)+Number(ship)+Number(tax)}</Text>
         </div>
 
         <div>

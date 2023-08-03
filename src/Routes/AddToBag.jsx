@@ -15,7 +15,7 @@ export default function AddToBag() {
 
   const fetchData = () => {
     axios.get(`https://western-topaz-plutonium.glitch.me/bag`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setData(res.data);
     });
   };
@@ -38,11 +38,11 @@ export default function AddToBag() {
   };
 
   const calculateShipping = () => {
-    return (calculateSubtotal()*0.1).toFixed(2);
+    return (calculateSubtotal() * 0.1).toFixed(2);
   }
 
   const calculateTax = () => {
-    return (calculateSubtotal()*0.15).toFixed(2);
+    return (calculateSubtotal() * 0.15).toFixed(2);
   }
 
   return (
@@ -99,7 +99,7 @@ export default function AddToBag() {
                     marginLeft={"1rem"}
                     marginRight={"3rem"}
                     _hover={{ color: "#07b5db", cursor: "pointer" }}
-                    onClick={()=>handleRemoveItem(i.id)}
+                    onClick={() => handleRemoveItem(i.id)}
                   >
                     Remove
                   </Text>

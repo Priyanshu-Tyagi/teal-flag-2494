@@ -4,14 +4,8 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
   Image,
-  Button,
 } from "@chakra-ui/react";
 import "../../../styles/navbar.css";
 
@@ -118,7 +112,7 @@ export default function NavSign() {
           <div key={i.navi} style={{ display: "flex", padding: "0 1.5rem" }}>
             <Image height={"32px"} src={i.logo} alt={i.navi} />
             <MenuItem
-              key={i.navi}
+              key={i.logo}
               _focus={{
                 bg: "none",
                 color: "#00819d",
@@ -166,7 +160,7 @@ export default function NavSign() {
           <div key={i.navi} style={{ display: "flex", padding: "0 1.5rem" }}>
             <Image height={"32px"} src={i.logo} alt={i.navi} />
             <MenuItem
-              key={i.navi}
+              key={i.logo}
               _focus={{
                 bg: "none",
                 color: "#00819d",

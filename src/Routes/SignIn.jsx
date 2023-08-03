@@ -28,7 +28,7 @@ export default function SignIn() {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         loginUser("eve.holt@reqres.in", res.token);
       });
   };

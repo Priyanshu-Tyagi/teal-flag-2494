@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { addtobag } from "../api/api";
 import Footer from "../Components/common/Footer/Footer";
 import Navbar from "../Components/common/Navbar/Navbar";
 import { ExclusiveOffer } from "../Components/Homepage/Banner";
@@ -16,13 +15,13 @@ export default function Single_Product_Page() {
         `https://western-topaz-plutonium.glitch.me/all/${param.id}`
       )
       .then((res) => {
-        console.log("check this ",res.data);
+        // console.log("check this ",res.data);
         setData(res.data);
       });
-  }, []);
+  }, [param.id]);
 
 
-    console.log(data)
+    // console.log(data)
 
 
   return (
