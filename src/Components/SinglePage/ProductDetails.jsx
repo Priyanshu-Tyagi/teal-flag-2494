@@ -4,10 +4,26 @@ import ReactStars from "react-rating-stars-component";
 // import { addtobag } from "../../api/api";
 import "../../styles/SingleProductPage.css";
 import Product_Images from "./ProductImages";
+import axios from "axios";
 
 
 export default function Product_Details({ data }) {
   console.log("prev-single", data)
+
+  const handleAddToBag = () => {
+
+    axios
+      .post("https://western-topaz-plutonium.glitch.me/bag", {...data,minprice: (data.pricesById.maxItemPrice - ((Number(data.pricesById.maxItemPercentOff) / 100) * data.pricesById.maxItemPrice)).toFixed(2)})
+      .then((res) => {
+        
+        console.log("Product added to bag:", res.data);
+      })
+      .catch((error) => {
+        
+        console.error("Error adding product to bag:", error);
+      });
+  };
+
 
   if (!data || Object.keys(data).length === 0) {
     return <div>Loading...</div>;
@@ -71,7 +87,7 @@ export default function Product_Details({ data }) {
 
           <br />
           <br />
-          <button className="addtobagbtn">
+          <button className="addtobagbtn" onClick={handleAddToBag}>
             Add to Bag
           </button>
         </div>
