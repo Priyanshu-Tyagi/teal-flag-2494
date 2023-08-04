@@ -4,6 +4,8 @@ import ReactStars from "react-rating-stars-component";
 import { getLeggings } from "../../../api/api";
 import Pagination from "../../common/Pagination";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import loaderAnimation from "../../../json/loader.json"
 
 export default function Leggings({ color, order }) {
   const [data, setData] = useState([]);
@@ -35,8 +37,20 @@ export default function Leggings({ color, order }) {
   // // console.log(data[0].mediaById[Object.keys(data[0].mediaById)[0]].src)
   // Object.keys(data[0].mediaById).forEach((key,index)=>{// console.log(data[0].mediaById[key].src)})
 
+  const style = {
+    width: "300px",
+    height: "300px",
+  }
+
   if (!data || Object.keys(data).length === 0) {
-    return <div>Loading...</div>;
+    // return <div>Loading...</div>;
+    setTimeout(() => {
+      return (
+        <div style={{ zIndex: "10", marginLeft: "40%" }}>
+          <Lottie style={style} animationData={loaderAnimation} loop={true}></Lottie>
+        </div>
+      )
+    }, 2000)
   }
   return (
     <div className="inside-tab-main-div">
