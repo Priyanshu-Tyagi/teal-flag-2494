@@ -3,6 +3,8 @@ import ReactStars from "react-rating-stars-component";
 import "../../styles/SingleProductPage.css";
 import Product_Images from "./ProductImages";
 import axios from "axios";
+import Lottie from "lottie-react";
+import loaderAnimation from "../../json/loader.json"
 
 
 export default function Product_Details({ data }) {
@@ -22,9 +24,30 @@ export default function Product_Details({ data }) {
       });
   };
 
+  // const container = useRef(null);
+
+  // Lottie.loadAnimation({
+  //   container: container, // the dom element that will contain the animation
+  //   renderer: 'svg',
+  //   loop: true,
+  //   autoplay: true,
+  //   path: '../../../public\loader.json' // the path to the animation json
+
+  // })
+
+  const style = {
+    width:"300px",
+    height:"300px",
+  }
+
 
   if (!data || Object.keys(data).length === 0) {
-    return <div>Loading...</div>;
+    // return <div>Loading...</div>;
+    return (
+      <div style={{zIndex:"10",marginLeft:"40%"}}>
+        <Lottie style={style} animationData={loaderAnimation} loop={true}></Lottie>
+      </div>
+    )
   }
   return (
 
